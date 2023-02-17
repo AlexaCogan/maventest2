@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+    <!-- указав group-by-instances="true" мы сделаем правильный порядок
+    (все тестовые методы из одного экземпляра
+     выполняются последовательно) запуска тестов,
+     но мы не можем поменять порядок создания экземляров тестовых классов
+     (пока, далее мы узнаем про interceptors)-->
+    <test name="FactoryTest" group-by-instances="true">
+<!--        <classes>-->
+<!--            <class name="TestFactory"/>-->
+<!--        </classes>-->
+        <packages>
+            <package name="maventest2.Factory" />
+        </packages>
+    </test>
+</suite>

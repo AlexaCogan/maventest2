@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Groups example suite" verbose="1">
+    <test name="Test 1">
+        <groups>
+            <run>
+                <include name="G13_1"/>
+                <include name="G13_2"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="maventest2.testng"/>
+        </packages>
+    </test>
+</suite>

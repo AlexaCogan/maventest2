@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- Если мы укажем в аттрибуте parallel "methods", то мы не добьёмся параллельности -->
+<suite name="Suite1" verbose="1" parallel="instances" thread-count="2">
+    <!-- в данном тесте используется параметр firefox, поэтому он отвечает за работу с Firefox -->
+    <test name="Firefox"  parallel="instances">
+        <parameter name="browser" value="firefox"/>
+        <packages>
+            <package name="maventest2.Parallel" />
+        </packages>
+    </test>
+    <!-- аналогично, но уже с chrome -->
+    <test name="Chrome"  parallel="instances">
+        <parameter name="browser" value="chrome"/>
+        <packages>
+            <package name="maventest2.Parallel" />
+        </packages>
+    </test>
+</suite>

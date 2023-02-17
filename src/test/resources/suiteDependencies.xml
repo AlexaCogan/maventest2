@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Groups example suite" verbose="1">
+    <test name="Test 1">
+        <groups>
+            <run>
+                <!-- здесь порядок описания тегов никак
+                не связан с порядком их выполнения -->
+                <include name="positive"/>
+                <include name="negative"/>
+                <exclude name="broken"/>
+            </run>
+            <dependencies>
+                <!-- поэтому порядок указывается здесь -->
+                <group name="positive" depends-on="negative"/>
+            </dependencies>
+        </groups>
+        <packages>
+            <package name="maventest2.testng"/>
+        </packages>
+    </test>
+</suite>

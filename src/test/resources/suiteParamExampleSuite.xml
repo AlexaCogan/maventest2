@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameters example suite" verbose="1">
+    <test name="TestAdminGoogleChrome">
+        <!-- параметры используются в ParametersTest -->
+        <parameter name="browser" value="Google Chrome"/>
+        <parameter name="username" value="admin"/>
+        <parameter name="password" value="admin"/>
+        <packages>
+            <package name="maventest2.ParamTest"/>
+        </packages>
+    </test>
+    <test name="TestGuestGoogleChrome">
+        <!-- параметры используются в ParametersTest -->
+        <parameter name="browser" value="Google Chrome"/>
+        <parameter name="username" value="guest"/>
+        <parameter name="password" value="guest"/>
+        <packages>
+            <package name="maventest2.ParamTest"/>
+        </packages>
+    </test>
+</suite>
